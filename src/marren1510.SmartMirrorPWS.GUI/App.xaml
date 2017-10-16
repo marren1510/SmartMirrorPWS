@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="marren1510.SmartMirrorPWS.GUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:marren1510.SmartMirrorPWS.GUI"
+    RequestedTheme="Light">
+
+</Application>
