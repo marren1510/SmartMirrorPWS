@@ -15,7 +15,7 @@
             TextWrapping="Wrap" 
             Text="{Binding Path=CurrentTime, FallbackValue=Tijd komt hier te staan}" 
             VerticalAlignment="Center"/>
-
+           
 
     </Grid>
  </Page>
