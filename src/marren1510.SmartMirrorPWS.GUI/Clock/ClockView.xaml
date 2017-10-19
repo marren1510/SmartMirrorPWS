@@ -13,10 +13,8 @@
             x:Name="textBlock"
             HorizontalAlignment="Center" 
             TextWrapping="Wrap" 
-            Text="{Binding Path=CurrentTime, FallbackValue=Tijd komt hier te staan}" 
+            Text="{Binding Path=CurrentTime, FallbackValue=Hier staat de tijd}" 
             VerticalAlignment="Center"/>
-           
 
     </Grid>
- </Page>
-
+</Page>

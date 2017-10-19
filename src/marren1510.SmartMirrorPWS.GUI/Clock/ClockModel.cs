@@ -8,7 +8,7 @@ namespace marren1510.SmartMirrorPWS.GUI.Clock
 {
     class ClockModel
     {
-        DateTime currenTime;
+        DateTime currentTime;
         public DateTime CurrentTime { get; set; }
 
         public void Update()
