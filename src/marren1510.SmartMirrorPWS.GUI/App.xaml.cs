@@ -1,4 +1,5 @@
-﻿using System;
+﻿using marren1510.SmartMirrorPWS.GUI.Clock;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -32,6 +33,9 @@ namespace marren1510.SmartMirrorPWS.GUI
             this.Suspending += OnSuspending;
         }
 
+       
+        
+        
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -39,6 +43,10 @@ namespace marren1510.SmartMirrorPWS.GUI
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            var clockModel = new ClockModel();
+            clockModel.Update();
+            (Resources["clockViewModel"] as ClockViewModel).Initialize(clockModel);
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -66,7 +74,7 @@ namespace marren1510.SmartMirrorPWS.GUI
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(ClockView), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

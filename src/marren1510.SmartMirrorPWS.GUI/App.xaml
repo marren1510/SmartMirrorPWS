@@ -3,6 +3,9 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:marren1510.SmartMirrorPWS.GUI"
+    xmlns:clock="using:marren1510.SmartMirrorPWS.GUI.Clock"
     RequestedTheme="Light">
-
+    <Application.Resources>
+        <clock:ClockViewModel x:Key="clockViewModel"/>
+    </Application.Resources>
 </Application>
