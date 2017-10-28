@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -37,8 +38,8 @@ namespace marren1510.SmartMirrorPWS.GUI.Clock
 
         private void UpdateTime()
         {
-            CurrentTime = $"{model.CurrentTime.ToString("dd MMMM yyyy HH:mm")}"; 
-        }
+            CurrentTime = $"{model.CurrentTime.ToString("dddd dd-MM-yyyy HH:mm") }"; 
+        } 
 
         public event PropertyChangedEventHandler PropertyChanged;
 
