@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace marren1510.SmartMirrorPWS.GUI.Clock
 {
-    class ClockModel
+    class ClockModel : BaseModel 
     {
         DateTime currentTime;
         public DateTime CurrentTime { get; set; }
 
-        public void Update()
+        public override TimeSpan Interval => TimeSpan.FromSeconds(1);
+
+        public override void Update()
         {
             CurrentTime = DateTime.Now;
         }
