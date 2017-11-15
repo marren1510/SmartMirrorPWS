@@ -45,7 +45,7 @@ namespace marren1510.SmartMirrorPWS.GUI.Clock
 
         private void UpdateTime()
         {
-            CurrentTime = $"{model.CurrentTime.ToString("HH:mm:ss" + Environment.NewLine + "dd-MM-yyyy") }"; 
+            CurrentTime = $"{model.CurrentTime.ToString("HH:mm" + Environment.NewLine + "dd-MM-yyyy") }"; 
         } 
 
      
