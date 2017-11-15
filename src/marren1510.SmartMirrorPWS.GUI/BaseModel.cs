@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace marren1510.SmartMirrorPWS.GUI
 {
-    class BaseModel
+    abstract class BaseModel
     {
+        public abstract TimeSpan Interval { get; }
+
+        public abstract void Update();
+
+        internal void TimerTick(object sender, object e)
+        {
+            Update();            
+        }
     }
 }

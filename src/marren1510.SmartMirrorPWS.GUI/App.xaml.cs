@@ -1,4 +1,5 @@
 ﻿using marren1510.SmartMirrorPWS.GUI.Clock;
+using marren1510.SmartMirrorPWS.GUI.Controllers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -45,6 +46,7 @@ namespace marren1510.SmartMirrorPWS.GUI
         {
             var clockModel = new ClockModel();
             clockModel.Update();
+            TimeController.RegisterModel(clockModel);
             (Resources["clockViewModel"] as ClockViewModel).Initialize(clockModel);
 
             Frame rootFrame = Window.Current.Content as Frame;

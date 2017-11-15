@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace marren1510.SmartMirrorPWS.GUI.Clock
 {
-    class ClockModel : BaseModel 
+    class ClockModel : BaseModel
     {
         DateTime currentTime;
         public DateTime CurrentTime { get; set; }
