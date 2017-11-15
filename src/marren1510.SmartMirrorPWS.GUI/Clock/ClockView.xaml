@@ -14,7 +14,11 @@
             HorizontalAlignment="Center" 
             TextWrapping="Wrap" 
             Text="{Binding Path=CurrentTime, FallbackValue=Hier staat de tijd}" 
-            VerticalAlignment="Center"/>
+            VerticalAlignment="Center" Margin="642.318,-58.525,-450.395,430.692" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontFamily="Agency FB" Height="267.833" Width="168.077" FontWeight="Bold" FontSize="48">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="90.171"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
     </Grid>
 </Page>
