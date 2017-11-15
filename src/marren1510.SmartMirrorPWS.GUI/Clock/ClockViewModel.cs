@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace marren1510.SmartMirrorPWS.GUI.Clock
 {
-     public class ClockViewModel : INotifyPropertyChanged
+     public class ClockViewModel : PropertyChangedBase
     {
         private ClockModel model;
         private string currentTime;
@@ -41,14 +39,6 @@ namespace marren1510.SmartMirrorPWS.GUI.Clock
             CurrentTime = $"{model.CurrentTime.ToString("HH:mm:ss" + Environment.NewLine + "dd-MM-yyyy") }"; 
         } 
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void  NotifyPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+     
     }
 }
