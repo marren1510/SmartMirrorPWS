@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace marren1510.SmartMirrorPWS.GUI
 {
-    abstract class BaseModel
+    abstract class BaseModel : PropertyChangedBase
     {
         public abstract TimeSpan Interval { get; }
 

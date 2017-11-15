@@ -32,6 +32,15 @@ namespace marren1510.SmartMirrorPWS.GUI.Clock
         {
             this.model = model;
             UpdateTime();
+            model.PropertyChanged += ModelPropertyChanged;
+        }
+
+        private void ModelPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(model.CurrentTime))
+            {
+                UpdateTime();
+            }
         }
 
         private void UpdateTime()

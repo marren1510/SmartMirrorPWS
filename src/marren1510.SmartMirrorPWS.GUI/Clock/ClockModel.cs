@@ -9,9 +9,25 @@ namespace marren1510.SmartMirrorPWS.GUI.Clock
     class ClockModel : BaseModel
     {
         DateTime currentTime;
-        public DateTime CurrentTime { get; set; }
+        public DateTime CurrentTime
+        {
+            get
+            {
+                return currentTime;
+            }
+            set
+            {
+                if (currentTime != value)
+                {
+                    currentTime = value;
+                    NotifyPropertyChanged("CurrentTime");
+                }
 
-        public override TimeSpan Interval => TimeSpan.FromSeconds(1);
+            }
+        }
+
+
+        public override TimeSpan Interval => TimeSpan.FromSeconds(1) ;
 
         public override void Update()
         {
